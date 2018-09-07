@@ -1,0 +1,40 @@
+/*
+  Global App CSS
+  ----------------------
+  Use this file for styles that should be applied to all components.
+  For example, "font-family" within the "body" selector is a CSS property
+  most apps will want applied to all components.
+
+  Any global CSS variables should also be applied here.
+*/
+
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --dark: #0f0f0f;
+  --clear: #f0f0f0;
+
+  --primary: #795548;
+  --accent: #009688;
+  --primary-dark: #5D4037;
+  --primary-light: #D7CCC8;
+  --primary-text: #212121;
+
+  --secondary-text: #757575;
+  --text: #FFFFFF;
+  --divider: #BDBDBD;
+  
+  --info: #00BFA5;
+  --success: #00C853;
+  --warning: #FFD740;
+  --danger: #D50000;
+
+  --font-stack: 'Segoe UI', Lato;
+}
+
+html, body {
+  font-family: var(--font-stack);
+  margin: 0;
+  padding: 0;
+}
+
