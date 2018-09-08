@@ -2,87 +2,87 @@
 export const tileList = [
   {
     name: 'System',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-go-to-start',
+    description: 'Display, sound, notifications, power',
     url: '/system'
   },
   {
     name: 'Devices',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-keyboard-classic',
+    description: 'Bluetooth, printers, mouse',
     url: '/devices'
   },
   {
     name: 'Phone',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-cellphone',
+    description: 'Link your Android, iPhone',
     url: '/phone'
   },
   {
     name: 'Networks & Internet',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-globe',
+    description: 'Wi-Fi, airplane mode, VPN',
     url: '/networks'
   },
   {
     name: 'Personalization',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-preview-link',
+    description: 'Background, lock screen, colors',
     url: '/personalization'
   },
   {
     name: 'Apps',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-all-apps',
+    description: 'Uninstall, defaults, optional features',
     url: '/apps'
   },
   {
     name: 'Accounts',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-contact',
+    description: 'Your accounts, email, sync, work, family',
     url: '/accounts'
   },
   {
     name: 'Time & Language',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-characters',
+    description: 'Speech, region, date',
     url: '/time-and-language'
   },
   {
     name: 'Gaming',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-switch-apps',
+    description: 'Game bar, DVR, broadcasting, game mode',
     url: '/gaming'
   },
   {
     name: 'Ease of Access',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-view-all',
+    description: 'Narrator, Magnifier, high contrast',
     url: '/ease-of-access'
   },
   {
-    name: 'Cortana',
-    image: '',
-    description: '',
-    url: '/cortana'
-  },
-  {
     name: 'Privacy',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-admin',
+    description: 'Location, camera',
     url: '/privacy'
   },
   {
     name: 'Update & Security',
-    image: '',
-    description: '',
+    icon: 'mdl2 mdl2-2x mdl2-sync',
+    description: 'Windows Updates, recovery, backup',
     url: '/update-and-security'
+  },
+  {
+    name: 'Search',
+    icon: 'mdl2 mdl2-2x mdl2-zoom',
+    description: 'Language, permissions, history',
+    url: '/search'
   },
 ];
 
 
-export async function mockService(resource: string) {
-  await new Promise(resolve => setTimeout(() => resolve(), 200));
+export async function mockService(resource: string, ms: number = 200) {
+  await new Promise(resolve => setTimeout(() => resolve(), ms));
   switch (resource) {
     case 'tiles':
       return tileList;

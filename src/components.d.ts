@@ -25,6 +25,9 @@ export namespace Components {
     'history'?: RouterHistory;
   }
 
+  interface LoaderComponent {}
+  interface LoaderComponentAttributes extends StencilHTMLAttributes {}
+
   interface SearchBarComponent {}
   interface SearchBarComponentAttributes extends StencilHTMLAttributes {}
 
@@ -53,6 +56,7 @@ declare global {
   interface StencilElementInterfaces {
     'AppRoot': Components.AppRoot;
     'GoBackComponent': Components.GoBackComponent;
+    'LoaderComponent': Components.LoaderComponent;
     'SearchBarComponent': Components.SearchBarComponent;
     'TileComponent': Components.TileComponent;
     'HomePage': Components.HomePage;
@@ -63,6 +67,7 @@ declare global {
   interface StencilIntrinsicElements {
     'app-root': Components.AppRootAttributes;
     'go-back-component': Components.GoBackComponentAttributes;
+    'loader-component': Components.LoaderComponentAttributes;
     'search-bar-component': Components.SearchBarComponentAttributes;
     'tile-component': Components.TileComponentAttributes;
     'home-page': Components.HomePageAttributes;
@@ -81,6 +86,12 @@ declare global {
   var HTMLGoBackComponentElement: {
     prototype: HTMLGoBackComponentElement;
     new (): HTMLGoBackComponentElement;
+  };
+
+  interface HTMLLoaderComponentElement extends Components.LoaderComponent, HTMLStencilElement {}
+  var HTMLLoaderComponentElement: {
+    prototype: HTMLLoaderComponentElement;
+    new (): HTMLLoaderComponentElement;
   };
 
   interface HTMLSearchBarComponentElement extends Components.SearchBarComponent, HTMLStencilElement {}
@@ -116,6 +127,7 @@ declare global {
   interface HTMLElementTagNameMap {
     'app-root': HTMLAppRootElement
     'go-back-component': HTMLGoBackComponentElement
+    'loader-component': HTMLLoaderComponentElement
     'search-bar-component': HTMLSearchBarComponentElement
     'tile-component': HTMLTileComponentElement
     'home-page': HTMLHomePageElement
@@ -126,6 +138,7 @@ declare global {
   interface ElementTagNameMap {
     'app-root': HTMLAppRootElement;
     'go-back-component': HTMLGoBackComponentElement;
+    'loader-component': HTMLLoaderComponentElement;
     'search-bar-component': HTMLSearchBarComponentElement;
     'tile-component': HTMLTileComponentElement;
     'home-page': HTMLHomePageElement;

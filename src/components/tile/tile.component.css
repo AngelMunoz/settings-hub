@@ -1,0 +1,52 @@
+.tile-component {
+  --tile-height: 85px;
+  --tile-width: 210px;
+  --tile-margin: 1rem;
+  --tile-background-color: var(--dark);
+  --tile-font-color: var(--text);
+
+  height: var(--tile-height);
+  width: var(--tile-width);
+
+  background-color: var(--tile-background-color);
+  color: var(--tile-font-color);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: var(--tile-margin);
+  text-align: left;
+  align-items: center;
+  font-size: 16px;
+  padding: 0.2rem;
+  border: 1px solid var(--dark);
+}
+
+.tile-component:hover {
+  --tile-component-hover-color: var(--accent);
+  border: 1px solid var(--tile-component-hover-color);
+}
+
+.tile-component:active {
+  --tile-component-active-color: var(--primary);
+  border: 2px dashed var(--tile-component-active-color);
+  border-radius: 0.2em;
+}
+
+
+
+.tile-component .mdl2 {
+  --tile-icon: var(--accent);
+  color: var(--tile-icon);
+}
+
+.tile-component .main {
+  --tile-main-padding: 10px;
+  padding: var(--tile-main-padding);
+}
+.tile-component .footer {
+  --tile-footer-text-color: var(--secondary-text);
+  --tile-footer-font-size: 14px;
+  color: var(--tile-footer-text-color);
+  font-size: var(--tile-footer-font-size);
+}

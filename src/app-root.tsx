@@ -10,7 +10,7 @@ export class AppRoot {
 
   render() {
     return (
-      <article>
+      <article class="app-root">
         <stencil-router>
           <stencil-route-switch scrollTopOffset={0}>
             <stencil-route url="/" component="home-page" exact={true} />

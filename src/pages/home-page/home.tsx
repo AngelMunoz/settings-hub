@@ -14,28 +14,31 @@ export class HomePage {
 
   render() {
     return (
-      <article>
-        <header>
+      <article class="home-page">
+        <header class="home-page__header">
           <section>
-            <h1>Settings Hub</h1>
+            <label class="home-page__header__title">Settings Hub</label>
             <search-bar-component></search-bar-component>
           </section>
         </header>
-        {this.isLoading ? `loading...` : `Loaded`
+        {
+          this.isLoading ? <loader-component></loader-component> : {}
         }
-        {this.tileList.map(tile =>
-          <tile-component onClick={this.navigate.bind(this, tile.url)}>
-            <header slot="header">
-              <img src={tile.image} />
-            </header>
-            <main>
-              <p>
-                <h3>{tile.name}</h3>
-                <small>{tile.description}</small>
-              </p>
-            </main>
-          </tile-component>)
-        }
+        <main class="home-page__tiles">
+          {this.tileList.map(tile =>
+            <tile-component onClick={this.navigate.bind(this, tile.url)}>
+              <header class="header" slot="header">
+                <i class={tile.icon}></i>
+              </header>
+              <main class="main">
+                <label>{tile.name}</label>
+                <footer class="footer">
+                  <small>{tile.description}</small>
+                </footer>
+              </main>
+            </tile-component>)
+          }
+        </main>
       </article>
     );
   }

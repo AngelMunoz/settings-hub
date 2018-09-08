@@ -9,7 +9,7 @@ export class TileComponent {
 
   render() {
     return (
-      <article>
+      <article class="tile-component">
         <slot name="header"></slot>
         <slot></slot>
         <slot name="footer"></slot>
