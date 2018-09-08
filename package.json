@@ -16,23 +16,24 @@
     "test.watch": "jest --watch"
   },
   "dependencies": {
-    "@stencil/core": "^0.12.4",
-    "@stencil/router": "^0.2.6"
+    "@stencil/core": "0.13.0-5",
+    "@stencil/router": "0.2.5"
   },
   "devDependencies": {
     "@types/jest": "^23.3.1",
-    "jest": "^23.4.2"
+    "jest": "^23.4.2",
+    "workbox-build": "3.4.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
+    "url": "git+https://github.com/AngelMunoz/settings-hub.git"
   },
-  "author": "Ionic Team",
+  "author": "Angel Munoz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ionic-team/stencil"
+    "url": "https://github.com/AngelMunoz/settings-hub"
   },
-  "homepage": "https://github.com/ionic-team/stencil",
+  "homepage": "https://github.com/AngelMunoz/settings-hub",
   "jest": {
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
