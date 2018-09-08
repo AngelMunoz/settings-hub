@@ -1,6 +1,6 @@
 {
   "name": "tun-settings-hub",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tun Settings Hub",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
