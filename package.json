@@ -1,7 +1,7 @@
 {
-  "name": "settings-hub",
+  "name": "tun-settings-hub",
   "version": "0.0.1",
-  "description": "Settings Hub",
+  "description": "Tun Settings Hub",
   "main": "dist/index.js",
   "types": "dist/types/components.d.ts",
   "collection": "dist/collection/collection-manifest.json",

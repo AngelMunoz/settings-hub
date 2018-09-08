@@ -1,19 +1,19 @@
 import { TestWindow } from '@stencil/core/testing';
-import { SearchBarComponent } from './search-bar.component';
+import { TunGoHome } from './tun-go-home';
 
 describe('app', () => {
   it('should build', () => {
-    expect(new SearchBarComponent()).toBeTruthy();
+    expect(new TunGoHome()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLSearchBarComponentElement;
+    let element: HTMLTunGoHomeElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [SearchBarComponent],
-        html: '<search-bar-component></search-bar-component>'
+        components: [TunGoHome],
+        html: '<tun-go-home></tun-go-home>'
       });
     });
 

@@ -1,8 +1,8 @@
-splitview-component {
+tun-split-view {
   height: 100%;
 }
 
-.splitview-component {
+.tun-split-view {
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -10,8 +10,8 @@ splitview-component {
   flex-direction: row;
 }
 
-.splitview-component
-.splitview-component__pane {
+.tun-split-view
+.tun-split-view__pane {
   --splitview-pane-background: transparent;
   background-color: var(--splitview-pane-background);
   display: flex;
@@ -23,9 +23,9 @@ splitview-component {
   border: 2px solid var(--dark);
 }
 
-splitview-component[is-Open]
-.splitview-component
-.splitview-component__pane:before {
+tun-split-view[is-Open]
+.tun-split-view
+.tun-split-view__pane:before {
   content: "";
   position: absolute;
   min-width: 300px;
@@ -42,9 +42,9 @@ splitview-component[is-Open]
   padding: 0;
 }
 
-splitview-component[is-Open]
-.splitview-component
-.splitview-component__pane__content:before {
+tun-split-view[is-Open]
+.tun-split-view
+.tun-split-view__pane__content:before {
   -webkit-filter: none;
   -moz-filter: none;
   -o-filter: none;
@@ -52,23 +52,23 @@ splitview-component[is-Open]
   filter: none;
 }
 
-splitview-component[is-Open]
-.splitview-component
-.splitview-component__pane {
+tun-split-view[is-Open]
+.tun-split-view
+.tun-split-view__pane {
   min-width: 300px;
   min-height: 100vh;
   z-index: 1000;
 }
 
-.splitview-component
-.splitview-component__pane 
-.splitview-component-menu {
+.tun-split-view
+.tun-split-view__pane 
+.tun-split-view-menu {
   text-align: center;
   height: 5vh;
   width: 100%;
 }
 
-.splitview-component-menu:before {
+.tun-split-view-menu:before {
   content: "\2261";
   color: var(--text);
   margin: 0;

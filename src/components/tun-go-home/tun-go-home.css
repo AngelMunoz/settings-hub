@@ -1,0 +1,23 @@
+
+
+.tun-go-home {
+  --tun-go-home-background-color: var(--dark);
+  --tun-go-home-text-color: var(--text);
+  --tun-go-home-height: 45px;
+  --tun-go-home-width: 100%;
+  --tun-go-home-text-alignment: left;
+  background-color: var(--tun-go-home-background-color);
+  color: var(--tun-go-home-text-color);
+  border: none;
+  height: var(--tun-go-home-height);
+  width: var(--tun-go-home-width);
+  text-align: var(--tun-go-home-text-alignment);
+  font-size: 18px;
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.tun-go-home i.mdl2.mdl2-home {
+  padding-right: 1em;
+}

@@ -1,19 +1,19 @@
 import { TestWindow } from '@stencil/core/testing';
-import { TileComponent } from './tile.component';
+import { SearchBarComponent } from './tun-tun-search-bar';
 
 describe('app', () => {
   it('should build', () => {
-    expect(new TileComponent()).toBeTruthy();
+    expect(new SearchBarComponent()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLTileComponentElement;
+    let element: HTMLSearchBarComponentElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [TileComponent],
-        html: '<tile-component></tile-component>'
+        components: [SearchBarComponent],
+        html: '<tun-search-bar></tun-search-bar>'
       });
     });
 

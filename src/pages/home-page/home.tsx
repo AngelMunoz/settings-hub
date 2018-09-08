@@ -18,15 +18,15 @@ export class HomePage {
         <header class="home-page__header">
           <section>
             <label class="home-page__header__title">Settings Hub</label>
-            <search-bar-component></search-bar-component>
+            <tun-search-bar></tun-search-bar>
           </section>
         </header>
         {
-          this.isLoading ? <loader-component></loader-component> : ''
+          this.isLoading ? <tun-loader></tun-loader> : ''
         }
         <main class="home-page__tiles">
           {this.tileList.map(tile =>
-            <tile-component onClick={this.navigate.bind(this, tile.url)}>
+            <tun-tile onClick={this.navigate.bind(this, tile.url)}>
               <header class="header" slot="header">
                 <i class={tile.icon}></i>
               </header>
@@ -36,7 +36,7 @@ export class HomePage {
                   <small>{tile.description}</small>
                 </footer>
               </main>
-            </tile-component>)
+            </tun-tile>)
           }
         </main>
       </article>
@@ -47,7 +47,7 @@ export class HomePage {
   }
 
   async componentDidLoad() {
-    this.tileList = await mockService('tiles');
+    this.tileList = await mockService('tiles', 2500);
     this.isLoading = false;
   }
 

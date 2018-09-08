@@ -1,19 +1,19 @@
 import { TestWindow } from '@stencil/core/testing';
-import { SplitviewComponent } from './splitview.component';
+import { TunSplitView } from './tun-split-view';
 
-describe('splitview-component', () => {
+describe('tun-split-view', () => {
   it('should build', () => {
-    expect(new SplitviewComponent()).toBeTruthy();
+    expect(new TunSplitView()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLSplitviewComponentElement;
+    let element: HTMLTunSplitViewElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [SplitviewComponent],
-        html: '<splitview-component></splitview-component>'
+        components: [TunSplitView],
+        html: '<tun-split-view></tun-split-view>'
       });
     });
 

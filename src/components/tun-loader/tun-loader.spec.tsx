@@ -1,19 +1,19 @@
 import { TestWindow } from '@stencil/core/testing';
-import { GoBackComponent } from './go-back.component';
+import { TunLoader } from './tun-loader';
 
 describe('app', () => {
   it('should build', () => {
-    expect(new GoBackComponent()).toBeTruthy();
+    expect(new TunLoader()).toBeTruthy();
   });
 
   describe('rendering', () => {
-    let element: HTMLGoBackComponentElement;
+    let element: HTMLTunLoaderElement;
     let testWindow: TestWindow;
     beforeEach(async () => {
       testWindow = new TestWindow();
       element = await testWindow.load({
-        components: [GoBackComponent],
-        html: '<go-back-component></go-back-component>'
+        components: [TunLoader],
+        html: '<tun-loader></tun-loader>'
       });
     });
 

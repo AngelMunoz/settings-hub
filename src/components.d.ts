@@ -18,31 +18,36 @@ export namespace Components {
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
-  interface GoBackComponent {
+  interface TunGoHome {
     'history': RouterHistory;
   }
-  interface GoBackComponentAttributes extends StencilHTMLAttributes {
+  interface TunGoHomeAttributes extends StencilHTMLAttributes {
     'history'?: RouterHistory;
   }
 
-  interface LoaderComponent {}
-  interface LoaderComponentAttributes extends StencilHTMLAttributes {}
+  interface TunLoader {}
+  interface TunLoaderAttributes extends StencilHTMLAttributes {}
 
-  interface SearchBarComponent {}
-  interface SearchBarComponentAttributes extends StencilHTMLAttributes {}
+  interface TunSearchBar {
+    'placeholder': string;
+  }
+  interface TunSearchBarAttributes extends StencilHTMLAttributes {
+    'onOn-search'?: (event: CustomEvent) => void;
+    'placeholder'?: string;
+  }
 
-  interface SplitviewComponent {
+  interface TunSplitView {
     'hasHamburger': boolean;
     'isOpen': boolean;
     'togglePane': () => void;
   }
-  interface SplitviewComponentAttributes extends StencilHTMLAttributes {
+  interface TunSplitViewAttributes extends StencilHTMLAttributes {
     'hasHamburger'?: boolean;
     'isOpen'?: boolean;
   }
 
-  interface TileComponent {}
-  interface TileComponentAttributes extends StencilHTMLAttributes {}
+  interface TunTile {}
+  interface TunTileAttributes extends StencilHTMLAttributes {}
 
   interface DevicesPage {
     'history': RouterHistory;
@@ -72,11 +77,11 @@ export namespace Components {
 declare global {
   interface StencilElementInterfaces {
     'AppRoot': Components.AppRoot;
-    'GoBackComponent': Components.GoBackComponent;
-    'LoaderComponent': Components.LoaderComponent;
-    'SearchBarComponent': Components.SearchBarComponent;
-    'SplitviewComponent': Components.SplitviewComponent;
-    'TileComponent': Components.TileComponent;
+    'TunGoHome': Components.TunGoHome;
+    'TunLoader': Components.TunLoader;
+    'TunSearchBar': Components.TunSearchBar;
+    'TunSplitView': Components.TunSplitView;
+    'TunTile': Components.TunTile;
     'DevicesPage': Components.DevicesPage;
     'HomePage': Components.HomePage;
     'NotFound': Components.NotFound;
@@ -85,11 +90,11 @@ declare global {
 
   interface StencilIntrinsicElements {
     'app-root': Components.AppRootAttributes;
-    'go-back-component': Components.GoBackComponentAttributes;
-    'loader-component': Components.LoaderComponentAttributes;
-    'search-bar-component': Components.SearchBarComponentAttributes;
-    'splitview-component': Components.SplitviewComponentAttributes;
-    'tile-component': Components.TileComponentAttributes;
+    'tun-go-home': Components.TunGoHomeAttributes;
+    'tun-loader': Components.TunLoaderAttributes;
+    'tun-search-bar': Components.TunSearchBarAttributes;
+    'tun-split-view': Components.TunSplitViewAttributes;
+    'tun-tile': Components.TunTileAttributes;
     'devices-page': Components.DevicesPageAttributes;
     'home-page': Components.HomePageAttributes;
     'not-found': Components.NotFoundAttributes;
@@ -103,34 +108,34 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
-  interface HTMLGoBackComponentElement extends Components.GoBackComponent, HTMLStencilElement {}
-  var HTMLGoBackComponentElement: {
-    prototype: HTMLGoBackComponentElement;
-    new (): HTMLGoBackComponentElement;
+  interface HTMLTunGoHomeElement extends Components.TunGoHome, HTMLStencilElement {}
+  var HTMLTunGoHomeElement: {
+    prototype: HTMLTunGoHomeElement;
+    new (): HTMLTunGoHomeElement;
   };
 
-  interface HTMLLoaderComponentElement extends Components.LoaderComponent, HTMLStencilElement {}
-  var HTMLLoaderComponentElement: {
-    prototype: HTMLLoaderComponentElement;
-    new (): HTMLLoaderComponentElement;
+  interface HTMLTunLoaderElement extends Components.TunLoader, HTMLStencilElement {}
+  var HTMLTunLoaderElement: {
+    prototype: HTMLTunLoaderElement;
+    new (): HTMLTunLoaderElement;
   };
 
-  interface HTMLSearchBarComponentElement extends Components.SearchBarComponent, HTMLStencilElement {}
-  var HTMLSearchBarComponentElement: {
-    prototype: HTMLSearchBarComponentElement;
-    new (): HTMLSearchBarComponentElement;
+  interface HTMLTunSearchBarElement extends Components.TunSearchBar, HTMLStencilElement {}
+  var HTMLTunSearchBarElement: {
+    prototype: HTMLTunSearchBarElement;
+    new (): HTMLTunSearchBarElement;
   };
 
-  interface HTMLSplitviewComponentElement extends Components.SplitviewComponent, HTMLStencilElement {}
-  var HTMLSplitviewComponentElement: {
-    prototype: HTMLSplitviewComponentElement;
-    new (): HTMLSplitviewComponentElement;
+  interface HTMLTunSplitViewElement extends Components.TunSplitView, HTMLStencilElement {}
+  var HTMLTunSplitViewElement: {
+    prototype: HTMLTunSplitViewElement;
+    new (): HTMLTunSplitViewElement;
   };
 
-  interface HTMLTileComponentElement extends Components.TileComponent, HTMLStencilElement {}
-  var HTMLTileComponentElement: {
-    prototype: HTMLTileComponentElement;
-    new (): HTMLTileComponentElement;
+  interface HTMLTunTileElement extends Components.TunTile, HTMLStencilElement {}
+  var HTMLTunTileElement: {
+    prototype: HTMLTunTileElement;
+    new (): HTMLTunTileElement;
   };
 
   interface HTMLDevicesPageElement extends Components.DevicesPage, HTMLStencilElement {}
@@ -159,11 +164,11 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'app-root': HTMLAppRootElement
-    'go-back-component': HTMLGoBackComponentElement
-    'loader-component': HTMLLoaderComponentElement
-    'search-bar-component': HTMLSearchBarComponentElement
-    'splitview-component': HTMLSplitviewComponentElement
-    'tile-component': HTMLTileComponentElement
+    'tun-go-home': HTMLTunGoHomeElement
+    'tun-loader': HTMLTunLoaderElement
+    'tun-search-bar': HTMLTunSearchBarElement
+    'tun-split-view': HTMLTunSplitViewElement
+    'tun-tile': HTMLTunTileElement
     'devices-page': HTMLDevicesPageElement
     'home-page': HTMLHomePageElement
     'not-found': HTMLNotFoundElement
@@ -172,11 +177,11 @@ declare global {
 
   interface ElementTagNameMap {
     'app-root': HTMLAppRootElement;
-    'go-back-component': HTMLGoBackComponentElement;
-    'loader-component': HTMLLoaderComponentElement;
-    'search-bar-component': HTMLSearchBarComponentElement;
-    'splitview-component': HTMLSplitviewComponentElement;
-    'tile-component': HTMLTileComponentElement;
+    'tun-go-home': HTMLTunGoHomeElement;
+    'tun-loader': HTMLTunLoaderElement;
+    'tun-search-bar': HTMLTunSearchBarElement;
+    'tun-split-view': HTMLTunSplitViewElement;
+    'tun-tile': HTMLTunTileElement;
     'devices-page': HTMLDevicesPageElement;
     'home-page': HTMLHomePageElement;
     'not-found': HTMLNotFoundElement;

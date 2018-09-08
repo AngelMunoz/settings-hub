@@ -1,0 +1,18 @@
+
+
+.tun-search-bar .tun-search-bar__input {
+  --tun-search-bar-input-outline: 2px solid var(--divider);
+  --tun-search-bar-input-background-color: var(--dark);
+  border: var(--tun-search-bar-input-outline);
+  background-color: var(--tun-search-bar-input-background-color);
+  padding: 0.5em;
+  width: 20vw;
+  margin: 1em;
+}
+
+.tun-search-bar .tun-search-bar__input:focus {
+  --tun-search-bar-input-background-color: var(--clear);
+  --tun-search-bar-input-outline: 2px solid var(--divider);
+  border: var(--tun-search-bar-input-outline);
+  background-color: var(--tun-search-bar-input-background-color);
+}

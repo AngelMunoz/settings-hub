@@ -10,9 +10,9 @@ export class SystemPage {
   @Prop() history: RouterHistory;
   render() {
     return (
-      <splitview-component isOpen={true} hasHamburger={false}>
-        <go-back-component history={this.history}></go-back-component>
-        <search-bar-component></search-bar-component>
+      <tun-split-view isOpen={true} hasHamburger={false}>
+        <tun-go-home history={this.history}></tun-go-home>
+        <tun-search-bar></tun-search-bar>
         <label class="view-title">System</label>
         <button class="splitview-btn">
           <i class="mdl2 mdl2-caption"></i> Display
@@ -30,7 +30,7 @@ export class SystemPage {
             </p>
           </article>
         </main>
-      </splitview-component>
+      </tun-split-view>
     );
   }
 }

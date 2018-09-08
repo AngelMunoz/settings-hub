@@ -2,14 +2,14 @@ import { Component } from '@stencil/core';
 
 
 @Component({
-  tag: 'tile-component',
-  styleUrl: 'tile.component.css'
+  tag: 'tun-tile',
+  styleUrl: 'tun-tile.css'
 })
-export class TileComponent {
+export class TunTile {
 
   render() {
     return (
-      <article class="tile-component">
+      <article class="tun-tile">
         <slot name="header"></slot>
         <slot></slot>
         <slot name="footer"></slot>

@@ -38,11 +38,15 @@ html, body {
   padding: 0;
 }
 
+/* 
+  The following Styles are shared in the application
+  so they are available as a global style
+*/
 
-.splitview-component__pane__content
+.tun-split-view__pane__content
 .splitview-btn,
-.splitview-component__pane__content
-.go-back-component {
+.tun-split-view__pane__content
+.tun-go-home {
   text-align: left;
   height: 5vh;
   width: 100%;
@@ -58,49 +62,49 @@ html, body {
   font-weight: 100;
 }
 
-.splitview-component__pane__content
+.tun-split-view__pane__content
 .view-title {
   padding-left: 1em;
   font-size: 18px;
   font-weight: 100;
 }
 
-.splitview-component__pane__content
+.tun-split-view__pane__content
 .splitview-btn i.mdl2 {
   padding-right: 1em;
 }
 
-.splitview-component__pane__content
-.go-back-component:hover,
-.splitview-component__pane__content
+.tun-split-view__pane__content
+.tun-go-home:hover,
+.tun-split-view__pane__content
 .splitview-btn:hover {
   background-color: var(--divider);
 }
 
-.splitview-component__pane__content
-.search-bar-component {
+.tun-split-view__pane__content
+.tun-search-bar {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.splitview-component__pane__content
-.search-bar-component
-.search-bar-component__input {
+.tun-split-view__pane__content
+.tun-search-bar
+.tun-search-bar__input {
   width: 80%;
   height: 25px;
   color: var(--text);
   background-color: var(--primary-text);
 }
 
-.splitview-component__pane__content
-.search-bar-component
-.search-bar-component__input:focus {
+.tun-split-view__pane__content
+.tun-search-bar
+.tun-search-bar__input:focus {
   color: var(--primary-text);
   background-color: var(--clear);
 }
 
 
-.splitview-component .splitview-component__content {
+.tun-split-view .tun-split-view__content {
   display: flex;
   margin: 0;
   margin-left: 5vw;

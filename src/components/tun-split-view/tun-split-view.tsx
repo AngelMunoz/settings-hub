@@ -1,10 +1,10 @@
 import { Component, Prop, Watch, Method } from '@stencil/core';
 
 @Component({
-  tag: 'splitview-component',
-  styleUrl: 'splitview.component.css'
+  tag: 'tun-split-view',
+  styleUrl: 'tun-split-view.css'
 })
-export class SplitviewComponent {
+export class TunSplitView {
 
   menu: HTMLMenuElement;
   @Prop({ reflectToAttr: true }) hasHamburger: boolean = true;
@@ -13,17 +13,17 @@ export class SplitviewComponent {
 
   render() {
     return (
-      <menu class="splitview-component" ref={(el: HTMLMenuElement) => this.menu = el}>
-        <section class="splitview-component__pane">
+      <menu class="tun-split-view" ref={(el: HTMLMenuElement) => this.menu = el}>
+        <section class="tun-split-view__pane">
           {
-            this.hasHamburger ? <a class="splitview-component-menu" onClick={this.togglePane.bind(this)}></a>
+            this.hasHamburger ? <a class="tun-split-view-menu" onClick={this.togglePane.bind(this)}></a>
               : ''
           }
-          <section class="splitview-component__pane__content">
+          <section class="tun-split-view__pane__content">
             <slot></slot>
           </section>
         </section>
-        <section class="splitview-component__content">
+        <section class="tun-split-view__content">
           <slot name="content"></slot>
         </section>
       </menu>

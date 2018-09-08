@@ -1,0 +1,75 @@
+.tun-tile {
+  /* Available Variables */
+  --tile-height: 85px;
+  --tile-width: 210px;
+  --tile-margin: 1rem;
+  --tile-background-color: var(--dark);
+  --tile-font-color: var(--text);
+  --tun-flex-direction: row;
+  --tun-justify-content: center;
+  --tun-text-align: center;
+  --tun-align-items: center;
+  --tun-font-size: 16px;
+  --tun-padding: 0.2rem;
+  --tun-border: 1px solid var(--dark);
+
+  /* UX Interaction  */
+  --tun-tile-hover-color: var(--accent);
+  --tun-tile-active-color: var(--primary);
+
+  /* Icon Styling */
+  --tile-icon: var(--accent);
+
+  /* Content Styling */
+  --tile-main-padding: 10px;
+  --tile-footer-text-color: var(--secondary-text);
+  --tile-footer-font-size: 14px;
+
+
+  /* Flex Properties */
+  display: flex;
+
+  /* Flex Alignment */
+  flex-direction: var(--tun-flex-direction);
+  justify-content: var(--tun-justify-content);
+  align-items: var(--tun-align-items);
+  
+  /* text values */
+  text-align: var(--tun-text-align);
+  font-size: var(--tun-font-size);;
+
+  /* element dimentions */
+  margin: var(--tile-margin);
+  padding: var(--tun-padding);
+  height: var(--tile-height);
+  width: var(--tile-width);
+
+  /* color/theme */
+  background-color: var(--tile-background-color);
+  color: var(--tile-font-color);
+
+  /* Borders */
+  border: var(--tun-border);
+
+}
+
+.tun-tile:hover {
+  border: 1px solid var(--tun-tile-hover-color);
+}
+
+.tun-tile:active {
+  border: 2px dashed var(--tun-tile-active-color);
+  border-radius: 0.2em;
+}
+
+.tun-tile .mdl2 {
+  color: var(--tile-icon);
+}
+
+.tun-tile .main {
+  padding: var(--tile-main-padding);
+}
+.tun-tile .footer {
+  color: var(--tile-footer-text-color);
+  font-size: var(--tile-footer-font-size);
+}
