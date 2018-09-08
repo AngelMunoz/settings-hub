@@ -21,8 +21,7 @@ export class SearchBarComponent {
 
   onSubmit(event) {
     event.preventDefault();
-    const { value } = event.target;
-    this.onSearch.emit({ value });
+    this.onSearch.emit({ value: this.search });
   }
 
   onInput({ target }) {
