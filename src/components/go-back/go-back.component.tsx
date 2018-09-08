@@ -10,7 +10,9 @@ export class GoBackComponent {
   @Prop() history: RouterHistory;
   render() {
     return (
-      <button onClick={this.goBack.bind(this)}>Go Back</button>
+      <button class="go-back-component" onClick={this.goBack.bind(this)}>
+        <i class="mdl2 mdl2-home"></i> Home
+      </button>
     );
   }
 

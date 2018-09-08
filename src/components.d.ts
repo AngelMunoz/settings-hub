@@ -31,8 +31,25 @@ export namespace Components {
   interface SearchBarComponent {}
   interface SearchBarComponentAttributes extends StencilHTMLAttributes {}
 
+  interface SplitviewComponent {
+    'hasHamburger': boolean;
+    'isOpen': boolean;
+    'togglePane': () => void;
+  }
+  interface SplitviewComponentAttributes extends StencilHTMLAttributes {
+    'hasHamburger'?: boolean;
+    'isOpen'?: boolean;
+  }
+
   interface TileComponent {}
   interface TileComponentAttributes extends StencilHTMLAttributes {}
+
+  interface DevicesPage {
+    'history': RouterHistory;
+  }
+  interface DevicesPageAttributes extends StencilHTMLAttributes {
+    'history'?: RouterHistory;
+  }
 
   interface HomePage {
     'history': RouterHistory;
@@ -58,7 +75,9 @@ declare global {
     'GoBackComponent': Components.GoBackComponent;
     'LoaderComponent': Components.LoaderComponent;
     'SearchBarComponent': Components.SearchBarComponent;
+    'SplitviewComponent': Components.SplitviewComponent;
     'TileComponent': Components.TileComponent;
+    'DevicesPage': Components.DevicesPage;
     'HomePage': Components.HomePage;
     'NotFound': Components.NotFound;
     'SystemPage': Components.SystemPage;
@@ -69,7 +88,9 @@ declare global {
     'go-back-component': Components.GoBackComponentAttributes;
     'loader-component': Components.LoaderComponentAttributes;
     'search-bar-component': Components.SearchBarComponentAttributes;
+    'splitview-component': Components.SplitviewComponentAttributes;
     'tile-component': Components.TileComponentAttributes;
+    'devices-page': Components.DevicesPageAttributes;
     'home-page': Components.HomePageAttributes;
     'not-found': Components.NotFoundAttributes;
     'system-page': Components.SystemPageAttributes;
@@ -100,10 +121,22 @@ declare global {
     new (): HTMLSearchBarComponentElement;
   };
 
+  interface HTMLSplitviewComponentElement extends Components.SplitviewComponent, HTMLStencilElement {}
+  var HTMLSplitviewComponentElement: {
+    prototype: HTMLSplitviewComponentElement;
+    new (): HTMLSplitviewComponentElement;
+  };
+
   interface HTMLTileComponentElement extends Components.TileComponent, HTMLStencilElement {}
   var HTMLTileComponentElement: {
     prototype: HTMLTileComponentElement;
     new (): HTMLTileComponentElement;
+  };
+
+  interface HTMLDevicesPageElement extends Components.DevicesPage, HTMLStencilElement {}
+  var HTMLDevicesPageElement: {
+    prototype: HTMLDevicesPageElement;
+    new (): HTMLDevicesPageElement;
   };
 
   interface HTMLHomePageElement extends Components.HomePage, HTMLStencilElement {}
@@ -129,7 +162,9 @@ declare global {
     'go-back-component': HTMLGoBackComponentElement
     'loader-component': HTMLLoaderComponentElement
     'search-bar-component': HTMLSearchBarComponentElement
+    'splitview-component': HTMLSplitviewComponentElement
     'tile-component': HTMLTileComponentElement
+    'devices-page': HTMLDevicesPageElement
     'home-page': HTMLHomePageElement
     'not-found': HTMLNotFoundElement
     'system-page': HTMLSystemPageElement
@@ -140,7 +175,9 @@ declare global {
     'go-back-component': HTMLGoBackComponentElement;
     'loader-component': HTMLLoaderComponentElement;
     'search-bar-component': HTMLSearchBarComponentElement;
+    'splitview-component': HTMLSplitviewComponentElement;
     'tile-component': HTMLTileComponentElement;
+    'devices-page': HTMLDevicesPageElement;
     'home-page': HTMLHomePageElement;
     'not-found': HTMLNotFoundElement;
     'system-page': HTMLSystemPageElement;

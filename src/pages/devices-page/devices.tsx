@@ -3,30 +3,30 @@ import { RouterHistory } from '@stencil/router';
 
 
 @Component({
-  tag: 'system-page',
-  styleUrl: 'system.css'
+  tag: 'devices-page',
+  styleUrl: 'devices.css'
 })
-export class SystemPage {
+export class DevicesPage {
   @Prop() history: RouterHistory;
   render() {
     return (
       <splitview-component isOpen={true} hasHamburger={false}>
         <go-back-component history={this.history}></go-back-component>
         <search-bar-component></search-bar-component>
-        <label class="view-title">System</label>
+        <label class="view-title">Devices</label>
         <button class="splitview-btn">
-          <i class="mdl2 mdl2-caption"></i> Display
+          <i class="mdl2 mdl2-cellphone"></i> Bluetooth & Other Devices
         </button>
         <button class="splitview-btn">
-          <i class="mdl2 mdl2-volume"></i> Sound
+          <i class="mdl2 mdl2-scan"></i> Printers & Scanners
         </button>
         <button class="splitview-btn">
-          <i class="mdl2 mdl2-comment"></i> Notifications & Actions
+          <i class="mdl2 mdl2-keyboard-classic"></i> Typing
         </button>
         <main slot="content">
           <article>
             <p>
-              System
+              Devices
             </p>
           </article>
         </main>

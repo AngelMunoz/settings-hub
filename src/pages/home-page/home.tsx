@@ -22,7 +22,7 @@ export class HomePage {
           </section>
         </header>
         {
-          this.isLoading ? <loader-component></loader-component> : {}
+          this.isLoading ? <loader-component></loader-component> : ''
         }
         <main class="home-page__tiles">
           {this.tileList.map(tile =>

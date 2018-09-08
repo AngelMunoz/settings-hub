@@ -1,0 +1,76 @@
+splitview-component {
+  height: 100%;
+}
+
+.splitview-component {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.splitview-component
+.splitview-component__pane {
+  --splitview-pane-background: transparent;
+  background-color: var(--splitview-pane-background);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  min-width: 300px;
+  border-radius: 0;
+  border: 2px solid var(--dark);
+}
+
+splitview-component[is-Open]
+.splitview-component
+.splitview-component__pane:before {
+  content: "";
+  position: absolute;
+  min-width: 300px;
+  overflow:hidden;
+  min-height: 100vh;
+  z-index: -1;
+  background-image: linear-gradient(to bottom, var(--secondary-text), var(--primary-light));
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+  margin: 0;
+  padding: 0;
+}
+
+splitview-component[is-Open]
+.splitview-component
+.splitview-component__pane__content:before {
+  -webkit-filter: none;
+  -moz-filter: none;
+  -o-filter: none;
+  -ms-filter: none;
+  filter: none;
+}
+
+splitview-component[is-Open]
+.splitview-component
+.splitview-component__pane {
+  min-width: 300px;
+  min-height: 100vh;
+  z-index: 1000;
+}
+
+.splitview-component
+.splitview-component__pane 
+.splitview-component-menu {
+  text-align: center;
+  height: 5vh;
+  width: 100%;
+}
+
+.splitview-component-menu:before {
+  content: "\2261";
+  color: var(--text);
+  margin: 0;
+  font-size: 2em;
+}
