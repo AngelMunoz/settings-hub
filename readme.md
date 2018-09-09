@@ -32,3 +32,23 @@ To run the unit tests and watch for file changes during development, run:
 ```
 npm run test.watch
 ```
+# Aurelia Meets Stencil and Angularjs
+[Stencil]: https://stenciljs.com/
+[Aurelia]: https://aurelia.io/
+[tun-stencil-hub]: https://www.npmjs.com/package/tun-settings-hub
+[Aurelia Repo]: https://github.com/AngelMunoz/settings-hub-au
+[Angular Repo]: https://stackblitz.com/edit/tun-settings-hub
+
+This is an [Stencil] Application that is used by an [Aurelia] Application as well as an AngularJs components from a npm published library [tun-settings-hub]. you can check the Other Repositories [Aurelia Repo] and [Angular Repo] which share the same components, in an agnostic way.
+
+
+# Caveats
+1. Stencil Plugin for webpack is necesary on `aurelia-cli` (webpack) based setups
+2. Stencil Events should have the following form `my-event` instead of `myEvent`, Given the fact that Aurelia doesn't distinguish between cammel case events, Aurelia won't pick up the custom Event, unless the event is all on lowercase, angularjs doesn't care at all because you have to subscribe via `addEventListener` and there is no problem picking up the names there
+
+Example: `<tun-search-bar on-search.delegate="onSearch($event)">` is okay, the following won't be picked up by aurelia `<tun-search-bar onSearch.delegate="onSearch($event)">`
+
+On the Stencil Side: `@Event({ eventName: 'on-search' }) onSearch: EventEmitter;` is ok, and the following while it is not wrong, it won't work for aurelia `@Event({ eventName: 'onSearch' }) onSearch: EventEmitter;`
+
+
+beyond that, everything related to bindings should work as normal, `bind, one-way, two-way`
